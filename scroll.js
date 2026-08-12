@@ -1,15 +1,25 @@
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
-var inital = "M 10 100 Q 500 100 990 100"
-var f = "M 10 100 Q 500 100 990 100"
+let mai2 = document.querySelector("#mai2");
+let cursor = document.querySelector("#cursor");
+
+  mai2.addEventListener("mousemove", function (dets) {
+    gsap.to(cursor, {
+      x: dets.x,
+      y: dets.y,
+   
+    });
+  });
+
+
 
 gsap.to(".page2 h1", {
-    transform :" translateX(-170%)",
+    transform :" translateX(-60%)",
 
     scrollTrigger: {
         trigger: ".page2",
         scroller: "body",
-start: "top 0%" ,
+start: "top 20%" ,
 end: "top -100%",
 scrub: 2,
 pin : true       
@@ -39,20 +49,4 @@ gsap.from(".main h1", {
     duration:4,
     stagger:2
 })
-  const ss =   document.querySelector(".string")
-  ss.addEventListener("mousemove", function(dets){
-path =`M 10 100 Q 500 ${dets.y} 990 100`
 
-gsap.to("svg path", {
-    attr : {d:path},
-    duration: 0.3,
-    ease:"elastic.out(1,0.2)"
-})
-  })
-ss.addEventListener("mouseleave", function(dets){
-  gsap.to("svg path", 
-    {
-        atttr: {d:f}
-    }
-  )  
-})
