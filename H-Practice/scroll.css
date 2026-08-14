@@ -19,6 +19,7 @@ body{
 .page2{
    
     width: 100%;
+    display: flex;
     background: black;
     color: rgb(229, 229, 229);
 }
@@ -31,6 +32,7 @@ body{
 }
 .main {
     display: flex;
+    
     justify-content: space-between;
     margin-top: 60px;
     align-items: center;
@@ -61,4 +63,29 @@ button{
     border-radius: 50%;
     position: fixed;
     z-index: 9999;
+}
+.sidediv{
+    width: 20%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px 20px;
+gap: 20px;
+color:white;
+border-top-left-radius: 30%;
+border-bottom-left-radius: 30%;
+outline: 2px solid white;
+flex-direction: column;
+font-size: 30px;
+    position:absolute;
+    top: 0;
+right: 0;
+z-index: 9999;
+
+}
+.sidediv h2{
+    
+    margin-bottom: 50px;
 }

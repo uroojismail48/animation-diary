@@ -50,3 +50,20 @@ gsap.from(".main h1", {
     stagger:2
 })
 
+
+var ss = gsap.timeline()
+gsap.from(".sidediv", {
+right:-600,
+duration :1,
+})
+ss.from("h4", {
+  x:100,
+  opacity : 0,
+  duration:0.7,
+  stagger:1.2
+})
+gsap.from("h2", {
+  opacity:0,
+  duration:5,
+
+})
